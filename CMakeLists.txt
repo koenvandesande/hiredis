@@ -159,6 +159,7 @@ INSTALL(FILES ${CMAKE_CURRENT_BINARY_DIR}/hiredis-config.cmake
               ${CMAKE_CURRENT_BINARY_DIR}/hiredis-config-version.cmake
         DESTINATION ${CMAKE_CONF_INSTALL_DIR})
 
+
 IF(ENABLE_SSL)
     IF (NOT OPENSSL_ROOT_DIR)
         IF (APPLE)
