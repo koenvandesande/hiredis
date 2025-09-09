@@ -102,8 +102,10 @@ if (MAIN_PROJECT)
   set(CPACK_PACKAGE_CONTACT "michael dot grunder at gmail dot com")
   set(CPACK_DEBIAN_PACKAGE_SHLIBDEPS ON)
   set(CPACK_RPM_PACKAGE_AUTOREQPROV ON)
-  
-  include(CPack)
+
+  if (NOT CPack_CMake_INCLUDED)  
+    include(CPack)
+  endif()
 endif()
 
 INSTALL(TARGETS hiredis
